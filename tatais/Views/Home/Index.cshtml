@@ -1,0 +1,22 @@
+﻿@using tatais.Models;
+
+@model IEnumerable<tatais.Models.History_encrypted>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p><a asp-action="Create">Зашифровать текст</a></p>
+
+
+<table class="table">
+    <tr><th>Зашифрованные сообщения с сервера</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.encrypted_text</td>
+
+        </tr>
+
+    }
+</table>
+
